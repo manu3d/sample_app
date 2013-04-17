@@ -31,7 +31,7 @@ development:
   password: secret0
   host: localhost
 
-test:
+test: &test
   adapter: postgresql
   database: sample_app_test
   username: postgres
@@ -44,3 +44,5 @@ production:
   username: postgres
   password: secret0
   host: localhost
+cucumber:
+  <<: *test
